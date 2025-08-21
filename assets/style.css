@@ -1,0 +1,63 @@
+/* Reset & Font */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; background: #f7f9fc; padding: 20px; }
+
+/* Headings */
+h2 { color: #333; margin-bottom: 20px; }
+
+/* Link Kembali */
+a.back { display: inline-block; margin-bottom: 15px; color: #2575fc; text-decoration: none; font-weight: bold; }
+a.back:hover { text-decoration: underline; }
+
+/* Form */
+form { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 30px; max-width: 600px; }
+form label { display: block; margin-top: 10px; font-weight: 500; }
+form input, form select { width: 100%; padding: 10px; margin-top: 5px; border-radius: 6px; border: 1px solid #ccc; transition: 0.3s; }
+form input:focus, form select:focus { border-color: #2575fc; box-shadow: 0 0 8px rgba(37,117,252,0.3); outline: none; }
+form button { margin-top: 15px; padding: 12px 20px; background: #2575fc; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+form button:hover { background: #6a11cb; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+th, td { padding: 12px 15px; text-align: left; }
+th { background: #2575fc; color: #fff; font-weight: 600; }
+tr:nth-child(even) { background: #f4f6fa; }
+tr:hover { background: #dce7ff; }
+
+/* Action links */
+.actions a { margin-right: 10px; padding: 5px 10px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: 500; }
+.actions a.edit { background: #4caf50; }
+.actions a.delete { background: #f44336; }
+.actions a.edit:hover { background: #45a049; }
+.actions a.delete:hover { background: #e53935; }
+
+/* Responsive table */
+@media (max-width: 768px){
+    table, thead, tbody, th, td, tr { display: block; }
+    th { position: absolute; top: -9999px; left: -9999px; }
+    td { position: relative; padding-left: 50%; border: none; border-bottom: 1px solid #ccc; }
+    td:before { position: absolute; top: 12px; left: 15px; width: 45%; padding-right: 10px; white-space: nowrap; font-weight: bold; }
+    td:nth-of-type(1):before { content: "No"; }
+    td:nth-of-type(2):before { content: "Nama Obat"; }
+    td:nth-of-type(3):before { content: "Satuan"; }
+    td:nth-of-type(4):before { content: "Sumber"; }
+    td:nth-of-type(5):before { content: "Kelompok"; }
+    td:nth-of-type(6):before { content: "Aksi"; }
+}
+.btn-add {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: #2575fc;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-add:hover { background: #6a11cb; }
+
+/* Contoh tambahan untuk smooth modal */
+#modalObat {
+    transition: opacity 0.3s ease;
+}
